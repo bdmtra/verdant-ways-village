@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+				'playfair': ['Playfair Display', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,16 +57,25 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Natural earth tones
+				sage: 'hsl(var(--sage))',
+				sand: 'hsl(var(--sand))',
+				moss: 'hsl(var(--moss))',
+				charcoal: 'hsl(var(--charcoal))',
+				stone: 'hsl(var(--stone))',
+				cream: 'hsl(var(--cream))',
+				bark: 'hsl(var(--bark))',
+				wheat: 'hsl(var(--wheat))',
+				cedar: 'hsl(var(--cedar))',
+				ivory: 'hsl(var(--ivory))',
+				grain: 'hsl(var(--grain))',
+				pebble: 'hsl(var(--pebble))',
+				driftwood: 'hsl(var(--driftwood))',
+				limestone: 'hsl(var(--limestone))',
+				shadow: 'hsl(var(--shadow))',
+				forest: 'hsl(var(--forest))',
+				earth: 'hsl(var(--earth))',
+				terracotta: 'hsl(var(--terracotta))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -69,26 +83,18 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
-				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+				'fade-in': {
+					from: { opacity: '0', transform: 'translateY(20px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
 				},
-				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+				'gentle-float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
-				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'fade-in': 'fade-in 0.6s ease-out',
+				'gentle-float': 'gentle-float 6s ease-in-out infinite'
 			}
 		}
 	},

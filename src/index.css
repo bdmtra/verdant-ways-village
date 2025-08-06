@@ -1,96 +1,61 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
+/* Natural earth-tone design system */
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Primary earth tones */
+    --sage: 51 15% 69%;           /* #c3c2b3 */
+    --sand: 39 32% 83%;           /* #e2d9c4 */
+    --moss: 48 14% 66%;           /* #b5b2a0 */
+    --charcoal: 60 5% 42%;        /* #6d6d61 */
+    --stone: 42 20% 77%;          /* #c6bca3 */
+    --cream: 33 27% 85%;          /* #e2d3c9 */
+    --bark: 32 14% 60%;           /* #ae9884 */
+    --wheat: 40 24% 74%;          /* #c7b99a */
+    --cedar: 32 17% 57%;          /* #a38f78 */
+    --ivory: 36 42% 90%;          /* #e8e0d4 */
+    --grain: 42 35% 75%;          /* #d8c59d */
+    --sage-dark: 48 8% 62%;       /* #a39e8f */
+    --pebble: 42 13% 70%;         /* #bcb7a9 */
+    --driftwood: 32 14% 53%;      /* #91816f */
+    --limestone: 42 18% 76%;      /* #c6c2b0 */
+    --shadow: 60 7% 48%;          /* #7c7c6d */
+    --forest: 48 15% 55%;         /* #958671 */
+    --earth: 32 22% 42%;          /* #675844 */
+    --sage-light: 42 18% 66%;     /* #b5a88c */
+    --terracotta: 24 35% 62%;     /* #c69173 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Semantic color mappings */
+    --background: var(--ivory);
+    --foreground: var(--earth);
+    --card: var(--cream);
+    --card-foreground: var(--charcoal);
+    --popover: var(--sand);
+    --popover-foreground: var(--earth);
+    --primary: var(--forest);
+    --primary-foreground: var(--ivory);
+    --secondary: var(--sage);
+    --secondary-foreground: var(--charcoal);
+    --muted: var(--pebble);
+    --muted-foreground: var(--driftwood);
+    --accent: var(--wheat);
+    --accent-foreground: var(--earth);
+    --destructive: 0 65% 51%;
+    --destructive-foreground: var(--ivory);
+    --border: var(--stone);
+    --input: var(--sand);
+    --ring: var(--forest);
+    --radius: 0.75rem;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom gradients */
+    --gradient-natural: linear-gradient(135deg, hsl(var(--sand)) 0%, hsl(var(--sage)) 50%, hsl(var(--forest)) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(var(--cream)) 0%, hsl(var(--wheat)) 50%, hsl(var(--terracotta)) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(var(--bark)) 0%, hsl(var(--cedar)) 50%, hsl(var(--earth)) 100%);
   }
 }
 
@@ -98,8 +63,36 @@ All colors MUST be HSL.
   * {
     @apply border-border;
   }
-
+  
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .gradient-natural {
+    background: var(--gradient-natural);
+  }
+  
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+  
+  .gradient-earth {
+    background: var(--gradient-earth);
+  }
+  
+  .text-shadow-soft {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hero-overlay {
+    background: linear-gradient(135deg, rgba(226, 217, 196, 0.95) 0%, rgba(195, 194, 179, 0.9) 100%);
+    backdrop-filter: blur(8px);
   }
 }
