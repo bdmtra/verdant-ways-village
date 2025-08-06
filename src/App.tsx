@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Directory from "./pages/Directory";
 import Listings from "./pages/Listings";
 import Events from "./pages/Events";
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />
             <Route path="blog" element={<Blog />} />
+            <Route path="blog/:id" element={<BlogPost />} />
             <Route path="directory" element={<Directory />} />
             <Route path="listings" element={<Listings />} />
             <Route path="events" element={<Events />} />

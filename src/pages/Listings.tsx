@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Listings = () => {
@@ -38,7 +37,7 @@ const Listings = () => {
                   </span>
                 </div>
                 
-                <div className="space-y-2 text-sm text-charcoal/80 mb-4">
+                <div className="space-y-2 text-sm text-charcoal/80">
                   <div>📍 {listing.address}</div>
                   <div className="flex justify-between">
                     <span>🏗️ {listing.zoning}</span>
@@ -46,10 +45,6 @@ const Listings = () => {
                   </div>
                   <div>🏠 {listing.type}</div>
                 </div>
-                
-                <button className="w-full bg-primary text-primary-foreground py-2 rounded-lg hover:bg-forest transition-colors">
-                  View Details
-                </button>
               </div>
             </div>
           ))}

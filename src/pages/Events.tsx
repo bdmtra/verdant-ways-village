@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Events = () => {
@@ -56,13 +55,9 @@ const Events = () => {
                     <div>🏢 <strong>Venue:</strong> {event.venue}</div>
                   </div>
                   
-                  <p className="text-charcoal/80 leading-relaxed mb-4">
+                  <p className="text-charcoal/80 leading-relaxed">
                     {event.description}
                   </p>
-                  
-                  <button className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-forest transition-colors">
-                    Register Now
-                  </button>
                 </div>
               </div>
             </div>

@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
   // Placeholder blog posts
@@ -31,9 +32,11 @@ const Blog = () => {
               </div>
               <div className="p-6">
                 <div className="text-sm text-muted-foreground mb-2">{post.date}</div>
-                <h2 className="text-xl font-playfair font-semibold text-earth mb-3 hover:text-primary transition-colors cursor-pointer">
-                  {post.title}
-                </h2>
+                <Link to={`/blog/${post.id}`}>
+                  <h2 className="text-xl font-playfair font-semibold text-earth mb-3 hover:text-primary transition-colors cursor-pointer">
+                    {post.title}
+                  </h2>
+                </Link>
                 <p className="text-charcoal/80 text-sm leading-relaxed">
                   {post.excerpt}
                 </p>
