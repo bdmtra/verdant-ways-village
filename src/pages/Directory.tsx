@@ -31,7 +31,7 @@ const Directory = () => {
         </div>
         
         <div className="mb-8">
-          <div className="bg-card border rounded-xl p-1 flex flex-col gap-4">
+          <div className="bg-card border rounded-xl p-0 flex flex-col gap-4">
             
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
             <TabsList className="w-full flex flex-wrap gap-2 bg-secondary/40 p-0 rounded-lg border border-border">
