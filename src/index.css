@@ -24,6 +24,7 @@
     --pebble: 42 13% 70%;         /* #bcb7a9 */
     --driftwood: 32 14% 53%;      /* #91816f */
     --limestone: 42 18% 76%;      /* #c6c2b0 */
+    --taupe: 56 12% 73%;          /* #c3c2b3 */
     --shadow: 60 7% 48%;          /* #7c7c6d */
     --forest: 125 25% 32%;         /* deep forest green */
     --earth: 32 22% 42%;          /* #675844 */
@@ -31,25 +32,25 @@
     --terracotta: 24 35% 62%;     /* #c69173 */
 
     /* Semantic color mappings */
-    --background: var(--sage);
-    --foreground: var(--earth);
-    --card: var(--cream);
+    --background: var(--ivory);
+    --foreground: var(--charcoal);
+    --card: var(--ivory);
     --card-foreground: var(--charcoal);
-    --popover: var(--sand);
-    --popover-foreground: var(--earth);
-    --primary: var(--stone);
-    --primary-foreground: var(--earth);
-    --secondary: var(--earth);
-    --secondary-foreground: var(--ivory);
+    --popover: var(--taupe);
+    --popover-foreground: var(--charcoal);
+    --primary: var(--taupe);
+    --primary-foreground: var(--charcoal);
+    --secondary: var(--bark);
+    --secondary-foreground: var(--charcoal);
     --muted: var(--pebble);
     --muted-foreground: var(--driftwood);
     --accent: var(--wheat);
-    --accent-foreground: var(--earth);
+    --accent-foreground: var(--charcoal);
     --destructive: 0 65% 51%;
     --destructive-foreground: var(--ivory);
-    --border: var(--stone);
-    --input: var(--sand);
-    --ring: var(--forest);
+    --border: var(--taupe);
+    --input: var(--taupe);
+    --ring: var(--charcoal);
     --radius: 0.75rem;
 
     /* Custom gradients */
