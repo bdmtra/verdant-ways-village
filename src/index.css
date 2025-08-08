@@ -96,7 +96,7 @@
   }
   
   .hero-overlay {
-    background: linear-gradient(135deg, rgba(226, 217, 196, 0.95) 0%, rgba(195, 194, 179, 0.9) 100%);
+    background: linear-gradient(135deg, hsl(var(--sage) / 0.92) 0%, hsl(var(--sage-light) / 0.9) 100%);
     backdrop-filter: blur(8px);
   }
 }

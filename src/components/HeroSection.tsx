@@ -17,7 +17,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="hero-overlay rounded-2xl p-12 animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-playfair font-bold text-earth mb-6 text-shadow-soft">
+            <h1 className="text-4xl md:text-6xl font-playfair font-bold text-primary mb-6 text-shadow-soft">
               Welcome to Our Sustainable Future
             </h1>
             <p className="text-xl md:text-2xl text-charcoal/90 font-light leading-relaxed">

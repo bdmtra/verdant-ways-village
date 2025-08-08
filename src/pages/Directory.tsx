@@ -2,6 +2,11 @@ import React, { useMemo, useState } from 'react';
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const Directory = () => {
   const categories = ["All", "Cafe", "Artisan", "Agriculture", "Wellness", "Services", "Retail"];
+  const dirImages = [
+    "/images/directory-business.jpg",
+    "/images/concept-agriculture.jpg",
+    "/images/concept-maker.jpg"
+  ];
   // Placeholder directory entries with categories
   const entries = Array.from({
     length: 12
@@ -32,11 +37,11 @@ const Directory = () => {
         <div className="mb-8">
           <div className="bg-card border rounded-xl p-1 flex flex-col gap-4">
             
-            <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
-              <TabsList className="w-full flex flex-wrap gap-2 bg-muted p-0 rounded-lg">
-                {categories.map(cat => <TabsTrigger key={cat} value={cat} className="px-4 py-2 rounded-full">
-                    {cat}
-                  </TabsTrigger>)}
+          <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
+            <TabsList className="w-full flex flex-wrap gap-2 bg-secondary/40 p-1 rounded-lg border border-border">
+            {categories.map(cat => <TabsTrigger key={cat} value={cat} className="px-4 py-2 rounded-full text-foreground hover:bg-accent/20 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow">
+                {cat}
+              </TabsTrigger>)}
               </TabsList>
             </Tabs>
           </div>
@@ -44,11 +49,11 @@ const Directory = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredEntries.map(entry => <div key={entry.id} className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
-              <div className="aspect-video bg-gradient-earth flex items-center justify-center text-ivory/80">
-                <span className="text-4xl">🏪</span>
+              <div className="aspect-video overflow-hidden">
+                <img src={dirImages[(entry.id - 1) % dirImages.length]} alt={`${entry.title} storefront`} className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="p-6">
-                <h2 className="text-xl font-playfair font-semibold text-earth mb-3">
+            <h2 className="text-xl font-playfair font-semibold text-foreground mb-3">
                   {entry.title}
                 </h2>
                 <div className="space-y-2 text-sm text-charcoal/80 mb-4">

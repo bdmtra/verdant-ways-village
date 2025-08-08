@@ -33,7 +33,7 @@ const Layout = () => {
                   to={item.href}
                   className={`text-sm font-medium transition-colors hover:text-accent ${
                     location.pathname === item.href
-                      ? 'text-accent border-b-2 border-accent'
+                      ? 'text-primary-foreground border-b-2 border-primary-foreground'
                       : 'text-primary-foreground/80'
                   }`}
                 >
@@ -75,7 +75,7 @@ const Layout = () => {
           </div>
           
           <div className="mt-8 pt-8 border-t border-border text-center">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-primary-foreground/90">
               © 2024 Town Name. Building a sustainable future together.
             </p>
           </div>
