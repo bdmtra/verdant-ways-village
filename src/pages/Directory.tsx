@@ -1,11 +1,12 @@
 import React, { useMemo, useState } from 'react';
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 const Directory = () => {
   const categories = ["All", "Cafe", "Artisan", "Agriculture", "Wellness", "Services", "Retail"];
   // Placeholder directory entries with categories
-  const entries = Array.from({ length: 12 }, (_, i) => {
-    const category = categories[(i % (categories.length - 1)) + 1];
+  const entries = Array.from({
+    length: 12
+  }, (_, i) => {
+    const category = categories[i % (categories.length - 1) + 1];
     return {
       id: i + 1,
       title: `Green Business ${i + 1}`,
@@ -19,16 +20,9 @@ const Directory = () => {
       image: "/api/placeholder/300/200"
     };
   });
-
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
-
-  const filteredEntries = useMemo(
-    () => entries.filter(e => selectedCategory === "All" ? true : e.category === selectedCategory),
-    [entries, selectedCategory]
-  );
-
-  return (
-    <div className="min-h-screen bg-background py-12">
+  const filteredEntries = useMemo(() => entries.filter(e => selectedCategory === "All" ? true : e.category === selectedCategory), [entries, selectedCategory]);
+  return <div className="min-h-screen bg-background py-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-playfair font-bold text-foreground mb-4">Business Directory</h1>
@@ -36,23 +30,20 @@ const Directory = () => {
         </div>
         
         <div className="mb-8">
-          <div className="bg-card border rounded-xl p-4 flex flex-col gap-4">
-            <div className="text-sm text-muted-foreground">Category</div>
+          <div className="bg-card border rounded-xl p-1 flex flex-col gap-4">
+            
             <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
               <TabsList className="w-full flex flex-wrap gap-2 bg-muted p-2 rounded-lg">
-                {categories.map((cat) => (
-                  <TabsTrigger key={cat} value={cat} className="px-4 py-2 rounded-full">
+                {categories.map(cat => <TabsTrigger key={cat} value={cat} className="px-4 py-2 rounded-full">
                     {cat}
-                  </TabsTrigger>
-                ))}
+                  </TabsTrigger>)}
               </TabsList>
             </Tabs>
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {filteredEntries.map((entry) => (
-            <div key={entry.id} className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+          {filteredEntries.map(entry => <div key={entry.id} className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
               <div className="aspect-video bg-gradient-earth flex items-center justify-center text-ivory/80">
                 <span className="text-4xl">🏪</span>
               </div>
@@ -71,8 +62,7 @@ const Directory = () => {
                   {entry.description}
                 </p>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
         
         {/* Pagination */}
@@ -88,8 +78,6 @@ const Directory = () => {
           </button>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Directory;
