@@ -26,7 +26,7 @@ const Blog = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {posts.map((post) => (
-            <article key={post.id} className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <article key={post.id} className="bg-card/95 border border-border/60 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="aspect-video bg-gradient-warm flex items-center justify-center text-ivory/80">
                 <span className="text-4xl">📝</span>
               </div>

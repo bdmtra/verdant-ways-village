@@ -101,7 +101,7 @@ const Listings = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {filteredListings.map((listing) => (
-            <div key={listing.id} className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <div key={listing.id} className="bg-card/95 border border-border/60 rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="aspect-video overflow-hidden">
                 <img src="/images/listing-property.jpg" alt="Eco property" className="w-full h-full object-cover" loading="lazy" />
               </div>

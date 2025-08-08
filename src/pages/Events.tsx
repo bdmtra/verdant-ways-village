@@ -35,7 +35,7 @@ const Events = () => {
         
         <div className="max-w-4xl mx-auto space-y-6 mb-12">
           {events.map((event) => (
-            <div key={event.id} className="bg-card rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <div key={event.id} className="bg-card/95 border border-border/60 rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300">
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="md:w-48 flex-shrink-0">
                   <div className="aspect-video bg-gradient-warm rounded-lg flex items-center justify-center text-ivory/80">

@@ -53,13 +53,13 @@ const ConceptCards = () => {
                 <img src={concept.image} alt={`${concept.title} photo`} className="w-full h-full object-cover" loading="lazy" />
               </div>
               <div className="p-8">
-                <h3 className="text-xl font-playfair font-semibold text-earth mb-3 group-hover:text-primary transition-colors">
+                <h3 className="text-xl font-playfair font-semibold text-earth mb-3 transition-colors">
                   {concept.title}
                 </h3>
                 <p className="text-charcoal/80 leading-relaxed">
                   {concept.description}
                 </p>
-                <div className="mt-4 text-primary font-medium text-sm group-hover:text-forest transition-colors">
+                <div className="mt-4 text-earth font-medium text-sm transition-colors">
                   Learn More →
                 </div>
               </div>
