@@ -33,7 +33,7 @@ const Directory = () => {
           <div className="bg-card border rounded-xl p-1 flex flex-col gap-4">
             
             <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
-              <TabsList className="w-full flex flex-wrap gap-2 bg-muted p-2 rounded-lg">
+              <TabsList className="w-full flex flex-wrap gap-2 bg-muted p-0 rounded-lg">
                 {categories.map(cat => <TabsTrigger key={cat} value={cat} className="px-4 py-2 rounded-full">
                     {cat}
                   </TabsTrigger>)}
