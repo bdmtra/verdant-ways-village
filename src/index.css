@@ -32,31 +32,31 @@
     --terracotta: 24 35% 62%;     /* #c69173 */
 
     /* Semantic color mappings */
-    --background: var(--cream);
-    --foreground: var(--shadow);
-    --card: var(--cream);
-    --card-foreground: var(--shadow);
-    --popover: var(--cream);
-    --popover-foreground: var(--shadow);
-    --primary: var(--shadow);
-    --primary-foreground: var(--ivory);
-    --secondary: var(--wheat);
-    --secondary-foreground: var(--shadow);
-    --muted: var(--pebble);
-    --muted-foreground: var(--driftwood);
-    --accent: var(--cedar);
-    --accent-foreground: var(--ivory);
-    --destructive: 0 65% 51%;
-    --destructive-foreground: var(--ivory);
-    --border: var(--wheat);
-    --input: var(--wheat);
-    --ring: var(--shadow);
-    --radius: 0.75rem;
+      --background: var(--ivory);
+      --foreground: var(--charcoal);
+      --card: var(--ivory);
+      --card-foreground: var(--charcoal);
+      --popover: var(--ivory);
+      --popover-foreground: var(--charcoal);
+      --primary: var(--charcoal); /* Dark sage for strong contrast */
+      --primary-foreground: var(--ivory);
+      --secondary: var(--stone); /* Stone green for surfaces */
+      --secondary-foreground: var(--charcoal);
+      --muted: var(--pebble);
+      --muted-foreground: var(--driftwood);
+      --accent: var(--sage-light); /* Soft sage accent */
+      --accent-foreground: var(--charcoal);
+      --destructive: 0 65% 51%;
+      --destructive-foreground: var(--ivory);
+      --border: var(--stone);
+      --input: var(--stone);
+      --ring: var(--charcoal);
+      --radius: 0.75rem;
 
     /* Custom gradients */
-    --gradient-natural: linear-gradient(135deg, hsl(var(--sand)) 0%, hsl(var(--sage)) 50%, hsl(var(--forest)) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(var(--cream)) 0%, hsl(var(--wheat)) 50%, hsl(var(--terracotta)) 100%);
-    --gradient-earth: linear-gradient(135deg, hsl(var(--bark)) 0%, hsl(var(--cedar)) 50%, hsl(var(--earth)) 100%);
+    --gradient-natural: linear-gradient(135deg, hsl(var(--ivory)) 0%, hsl(var(--stone)) 50%, hsl(var(--sage-dark)) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(var(--ivory)) 0%, hsl(var(--wheat)) 50%, hsl(var(--bark)) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(var(--bark)) 0%, hsl(var(--sage-light)) 50%, hsl(var(--charcoal)) 100%);
   }
 }
 
