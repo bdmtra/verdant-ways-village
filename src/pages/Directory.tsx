@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const Directory = () => {
   const categories = ["All", "Cafe", "Artisan", "Agriculture", "Wellness", "Services", "Retail"];
@@ -31,23 +31,22 @@ const Directory = () => {
     <div className="min-h-screen bg-background py-12">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-playfair font-bold text-earth mb-4">Business Directory</h1>
+          <h1 className="text-4xl font-playfair font-bold text-foreground mb-4">Business Directory</h1>
           <p className="text-lg text-charcoal/80">Discover local businesses that share our values</p>
         </div>
         
         <div className="mb-8">
-          <div className="bg-card border rounded-xl p-4 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+          <div className="bg-card border rounded-xl p-4 flex flex-col gap-4">
             <div className="text-sm text-muted-foreground">Category</div>
-            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-              <SelectTrigger className="w-full sm:w-64">
-                <SelectValue placeholder="Select category" />
-              </SelectTrigger>
-              <SelectContent>
-                {categories.map(cat => (
-                  <SelectItem key={cat} value={cat}>{cat}</SelectItem>
+            <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
+              <TabsList className="w-full flex flex-wrap gap-2 bg-muted p-2 rounded-lg">
+                {categories.map((cat) => (
+                  <TabsTrigger key={cat} value={cat} className="px-4 py-2 rounded-full">
+                    {cat}
+                  </TabsTrigger>
                 ))}
-              </SelectContent>
-            </Select>
+              </TabsList>
+            </Tabs>
           </div>
         </div>
 
@@ -64,9 +63,9 @@ const Directory = () => {
                 <div className="space-y-2 text-sm text-charcoal/80 mb-4">
                   <div>📍 {entry.address}</div>
                   <div>📞 {entry.phone}</div>
-                  <div>🌐 <a href={`http://${entry.website}`} className="text-primary hover:text-forest transition-colors">{entry.website}</a></div>
-                  <div>✉️ <a href={`mailto:${entry.email}`} className="text-primary hover:text-forest transition-colors">{entry.email}</a></div>
-                  <div>📱 <a href={`https://instagram.com/${entry.instagram.slice(1)}`} className="text-primary hover:text-forest transition-colors">{entry.instagram}</a></div>
+                  <div>🌐 <a href={`http://${entry.website}`} className="text-primary hover:text-accent transition-colors">{entry.website}</a></div>
+                  <div>✉️ <a href={`mailto:${entry.email}`} className="text-primary hover:text-accent transition-colors">{entry.email}</a></div>
+                  <div>📱 <a href={`https://instagram.com/${entry.instagram.slice(1)}`} className="text-primary hover:text-accent transition-colors">{entry.instagram}</a></div>
                 </div>
                 <p className="text-charcoal/80 text-sm leading-relaxed">
                   {entry.description}

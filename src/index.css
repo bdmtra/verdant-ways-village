@@ -32,25 +32,25 @@
     --terracotta: 24 35% 62%;     /* #c69173 */
 
     /* Semantic color mappings */
-    --background: var(--taupe);
-    --foreground: var(--charcoal);
-    --card: var(--ivory);
-    --card-foreground: var(--charcoal);
-    --popover: var(--ivory);
-    --popover-foreground: var(--charcoal);
-    --primary: var(--taupe);
-    --primary-foreground: var(--charcoal);
-    --secondary: var(--charcoal);
-    --secondary-foreground: var(--ivory);
+    --background: var(--cream);
+    --foreground: var(--shadow);
+    --card: var(--cream);
+    --card-foreground: var(--shadow);
+    --popover: var(--cream);
+    --popover-foreground: var(--shadow);
+    --primary: var(--shadow);
+    --primary-foreground: var(--ivory);
+    --secondary: var(--wheat);
+    --secondary-foreground: var(--shadow);
     --muted: var(--pebble);
     --muted-foreground: var(--driftwood);
-    --accent: var(--bark);
-    --accent-foreground: var(--charcoal);
+    --accent: var(--cedar);
+    --accent-foreground: var(--ivory);
     --destructive: 0 65% 51%;
     --destructive-foreground: var(--ivory);
-    --border: var(--taupe);
-    --input: var(--taupe);
-    --ring: var(--charcoal);
+    --border: var(--wheat);
+    --input: var(--wheat);
+    --ring: var(--shadow);
     --radius: 0.75rem;
 
     /* Custom gradients */

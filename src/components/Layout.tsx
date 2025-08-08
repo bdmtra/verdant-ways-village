@@ -16,14 +16,14 @@ const Layout = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-card/80 backdrop-blur-sm border-b border-border sticky top-0 z-50">
+      <header className="bg-primary text-primary-foreground sticky top-0 z-50 shadow-sm">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="flex items-center">
-              <div className="w-12 h-12 bg-charcoal rounded-lg flex items-center justify-center mr-3">
-                <span className="text-ivory font-bold text-sm">LOGO</span>
+              <div className="w-12 h-12 bg-primary-foreground rounded-lg flex items-center justify-center mr-3">
+                <span className="text-primary font-bold text-sm">LOGO</span>
               </div>
-              <span className="text-2xl font-playfair font-semibold text-charcoal">TOWN NAME</span>
+              <span className="text-2xl font-playfair font-semibold text-primary-foreground">TOWN NAME</span>
             </Link>
             
             <nav className="hidden md:flex space-x-8">
@@ -31,10 +31,10 @@ const Layout = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`text-sm font-medium transition-colors hover:text-primary ${
+                  className={`text-sm font-medium transition-colors hover:text-accent ${
                     location.pathname === item.href
-                      ? 'text-primary border-b-2 border-primary'
-                      : 'text-charcoal/80'
+                      ? 'text-accent border-b-2 border-accent'
+                      : 'text-primary-foreground/80'
                   }`}
                 >
                   {item.name}
@@ -51,14 +51,14 @@ const Layout = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-card border-t border-border mt-16">
+      <footer className="bg-primary text-primary-foreground border-t border-border mt-16">
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col md:flex-row justify-between items-start">
             <div className="flex items-center mb-8 md:mb-0">
-              <div className="w-12 h-12 bg-charcoal rounded-lg flex items-center justify-center mr-3">
-                <span className="text-ivory font-bold text-sm">LOGO</span>
+              <div className="w-12 h-12 bg-primary-foreground rounded-lg flex items-center justify-center mr-3">
+                <span className="text-primary font-bold text-sm">LOGO</span>
               </div>
-              <span className="text-2xl font-playfair font-semibold text-charcoal">TOWN NAME</span>
+              <span className="text-2xl font-playfair font-semibold text-primary-foreground">TOWN NAME</span>
             </div>
             
             <nav className="flex flex-col space-y-3">
@@ -66,7 +66,7 @@ const Layout = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className="text-sm font-medium text-charcoal/80 hover:text-primary transition-colors"
+                  className="text-sm font-medium text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   {item.name}
                 </Link>
