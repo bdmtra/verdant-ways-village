@@ -9,7 +9,7 @@
 @layer base {
   :root {
     /* Primary earth tones */
-    --sage: 120 20% 92%;           /* light sage-green */
+    --sage: 160 64% 95%;           /* light mint green */
     --sand: 39 32% 83%;           /* #e2d9c4 */
     --moss: 120 15% 70%;           /* moss green */
     --charcoal: 60 5% 42%;        /* #6d6d61 */
@@ -20,43 +20,43 @@
     --cedar: 32 17% 57%;          /* #a38f78 */
     --ivory: 36 42% 90%;          /* #e8e0d4 */
     --grain: 42 35% 75%;          /* #d8c59d */
-    --sage-dark: 48 8% 62%;       /* #a39e8f */
+    --sage-dark: 152 35% 40%;       /* mid green */
     --pebble: 42 13% 70%;         /* #bcb7a9 */
     --driftwood: 32 14% 53%;      /* #91816f */
     --limestone: 42 18% 76%;      /* #c6c2b0 */
     --taupe: 56 12% 73%;          /* #c3c2b3 */
     --shadow: 60 7% 48%;          /* #7c7c6d */
-    --forest: 125 25% 32%;         /* deep forest green */
+    --forest: 142 70% 40%;         /* bright green */
     --earth: 32 22% 42%;          /* #675844 */
-    --sage-light: 42 18% 66%;     /* #b5a88c */
+    --sage-light: 150 40% 80%;     /* soft mint green */
     --terracotta: 24 35% 62%;     /* #c69173 */
 
     /* Semantic color mappings */
-      --background: var(--ivory);
+      --background: var(--sage);
       --foreground: var(--charcoal);
-      --card: var(--ivory);
+      --card: var(--sage);
       --card-foreground: var(--charcoal);
-      --popover: var(--ivory);
+      --popover: var(--sage);
       --popover-foreground: var(--charcoal);
-      --primary: var(--charcoal); /* Dark sage for strong contrast */
+      --primary: var(--forest); /* Bright green for brand/CTAs */
       --primary-foreground: var(--ivory);
-      --secondary: var(--stone); /* Stone green for surfaces */
+      --secondary: var(--sage-light); /* Soft mint surfaces */
       --secondary-foreground: var(--charcoal);
       --muted: var(--pebble);
       --muted-foreground: var(--driftwood);
-      --accent: var(--sage-light); /* Soft sage accent */
-      --accent-foreground: var(--charcoal);
+      --accent: var(--sage-dark); /* Mid green accent */
+      --accent-foreground: var(--ivory);
       --destructive: 0 65% 51%;
       --destructive-foreground: var(--ivory);
-      --border: var(--stone);
-      --input: var(--stone);
-      --ring: var(--charcoal);
+      --border: var(--sage-light);
+      --input: var(--sage-light);
+      --ring: var(--forest);
       --radius: 0.75rem;
 
     /* Custom gradients */
-    --gradient-natural: linear-gradient(135deg, hsl(var(--ivory)) 0%, hsl(var(--stone)) 50%, hsl(var(--sage-dark)) 100%);
-    --gradient-warm: linear-gradient(135deg, hsl(var(--ivory)) 0%, hsl(var(--wheat)) 50%, hsl(var(--bark)) 100%);
-    --gradient-earth: linear-gradient(135deg, hsl(var(--bark)) 0%, hsl(var(--sage-light)) 50%, hsl(var(--charcoal)) 100%);
+    --gradient-natural: linear-gradient(135deg, hsl(var(--sage)) 0%, hsl(var(--sage-light)) 50%, hsl(var(--forest)) 100%);
+    --gradient-warm: linear-gradient(135deg, hsl(var(--sage)) 0%, hsl(var(--forest)) 50%, hsl(var(--sage-dark)) 100%);
+    --gradient-earth: linear-gradient(135deg, hsl(var(--forest)) 0%, hsl(var(--sage-dark)) 50%, hsl(var(--charcoal)) 100%);
   }
 }
 
