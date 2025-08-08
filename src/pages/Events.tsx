@@ -69,7 +69,7 @@ const Events = () => {
           <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-forest transition-colors">
             1
           </button>
-          <button className="px-4 py-2 bg-muted text-muted-foreground rounded-lg hover:bg-accent transition-colors">
+          <button className="px-4 py-2 bg-primary/15 text-primary rounded-lg hover:bg-primary/25 transition-colors">
             2
           </button>
         </div>
