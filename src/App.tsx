@@ -21,7 +21,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.PROD ? '/verdant-ways-village' : ''}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Index />} />
