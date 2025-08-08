@@ -2,11 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 const Directory = () => {
   const categories = ["All", "Cafe", "Artisan", "Agriculture", "Wellness", "Services", "Retail"];
-  const dirImages = [
-    "/images/directory-business.jpg",
-    "/images/concept-agriculture.jpg",
-    "/images/concept-maker.jpg"
-  ];
+  const dirImages = ["/images/directory-business.jpg", "/images/concept-agriculture.jpg", "/images/concept-maker.jpg"];
   // Placeholder directory entries with categories
   const entries = Array.from({
     length: 12
@@ -38,7 +34,7 @@ const Directory = () => {
           <div className="bg-card border rounded-xl p-1 flex flex-col gap-4">
             
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory}>
-            <TabsList className="w-full flex flex-wrap gap-2 bg-secondary/40 p-1 rounded-lg border border-border">
+            <TabsList className="w-full flex flex-wrap gap-2 bg-secondary/40 p-0 rounded-lg border border-border">
             {categories.map(cat => <TabsTrigger key={cat} value={cat} className="px-4 py-2 rounded-full text-foreground hover:bg-accent/20 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow">
                 {cat}
               </TabsTrigger>)}
