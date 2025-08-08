@@ -37,10 +37,10 @@
     --card-foreground: var(--charcoal);
     --popover: var(--sand);
     --popover-foreground: var(--earth);
-    --primary: var(--forest);
-    --primary-foreground: var(--ivory);
-    --secondary: var(--sage);
-    --secondary-foreground: var(--charcoal);
+    --primary: var(--stone);
+    --primary-foreground: var(--earth);
+    --secondary: var(--earth);
+    --secondary-foreground: var(--ivory);
     --muted: var(--pebble);
     --muted-foreground: var(--driftwood);
     --accent: var(--wheat);
