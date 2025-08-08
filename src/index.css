@@ -9,7 +9,7 @@
 @layer base {
   :root {
     /* Primary earth tones */
-    --sage: 160 64% 95%;           /* light mint green */
+    --sage: 150 28% 96%;           /* light tinted green */
     --sand: 39 32% 83%;           /* #e2d9c4 */
     --moss: 120 15% 70%;           /* moss green */
     --charcoal: 60 5% 42%;        /* #6d6d61 */
@@ -20,15 +20,15 @@
     --cedar: 32 17% 57%;          /* #a38f78 */
     --ivory: 36 42% 90%;          /* #e8e0d4 */
     --grain: 42 35% 75%;          /* #d8c59d */
-    --sage-dark: 152 35% 40%;       /* mid green */
+    --sage-dark: 150 38% 36%;       /* medium-deep green */
     --pebble: 42 13% 70%;         /* #bcb7a9 */
     --driftwood: 32 14% 53%;      /* #91816f */
     --limestone: 42 18% 76%;      /* #c6c2b0 */
     --taupe: 56 12% 73%;          /* #c3c2b3 */
     --shadow: 60 7% 48%;          /* #7c7c6d */
-    --forest: 142 70% 40%;         /* bright green */
+    --forest: 145 55% 42%;         /* medium bright green */
     --earth: 32 22% 42%;          /* #675844 */
-    --sage-light: 150 40% 80%;     /* soft mint green */
+    --sage-light: 150 35% 88%;     /* soft sage surface */
     --terracotta: 24 35% 62%;     /* #c69173 */
 
     /* Semantic color mappings */
