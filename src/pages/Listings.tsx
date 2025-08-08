@@ -56,7 +56,7 @@ const Listings = () => {
         </div>
         
         <div className="mb-8">
-          <div className="bg-card border rounded-xl p-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="bg-primary/5 border border-primary/15 rounded-xl p-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div>
               <label className="block text-sm text-muted-foreground mb-1">Price From ($)</label>
               <Input inputMode="numeric" value={priceFrom} onChange={(e) => setPriceFrom(e.target.value.replace(/\D/g, ''))} placeholder="e.g. 300000" />
@@ -134,10 +134,10 @@ const Listings = () => {
           <button className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-forest transition-colors">
             1
           </button>
-          <button className="px-4 py-2 bg-muted text-muted-foreground rounded-lg hover:bg-accent transition-colors">
+          <button className="px-4 py-2 bg-primary/15 text-primary rounded-lg hover:bg-primary/25 transition-colors">
             2
           </button>
-          <button className="px-4 py-2 bg-muted text-muted-foreground rounded-lg hover:bg-accent transition-colors">
+          <button className="px-4 py-2 bg-primary/15 text-primary rounded-lg hover:bg-primary/25 transition-colors">
             3
           </button>
         </div>

@@ -54,12 +54,12 @@ const Layout = () => {
       <footer className="bg-primary text-primary-foreground border-t border-border mt-16">
         <div className="container mx-auto px-4 py-12">
           <div className="flex flex-col md:flex-row justify-between items-start">
-            <div className="flex items-center mb-8 md:mb-0">
+            <Link to="/" className="flex items-center mb-8 md:mb-0">
               <div className="w-12 h-12 bg-primary-foreground rounded-lg flex items-center justify-center mr-3">
                 <span className="text-primary font-bold text-sm">LOGO</span>
               </div>
               <span className="text-2xl font-playfair font-semibold text-primary-foreground">TOWN NAME</span>
-            </div>
+            </Link>
             
             <nav className="flex flex-col space-y-3">
               {navigation.map((item) => (
