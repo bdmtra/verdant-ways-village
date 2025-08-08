@@ -3,9 +3,8 @@ const HeroSection = () => {
   return <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Hero Background */}
       <img src="/images/hero-green.jpg" alt="Sustainable green community landscape" className="absolute inset-0 w-full h-full object-cover" />
-      <div className="absolute inset-0 gradient-natural"></div>
       {/* Overlay Pattern */}
-      <div className="absolute inset-0 opacity-10" style={{
+      <div className="absolute inset-0 opacity-30" style={{
       backgroundImage: `radial-gradient(circle at 25% 25%, rgba(109, 109, 97, 0.2) 0%, transparent 50%),
                          radial-gradient(circle at 75% 75%, rgba(151, 134, 113, 0.2) 0%, transparent 50%)`
     }}></div>
