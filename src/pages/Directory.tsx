@@ -1,19 +1,31 @@
-
-import React from 'react';
+import React, { useMemo, useState } from 'react';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 const Directory = () => {
-  // Placeholder directory entries
-  const entries = Array.from({ length: 12 }, (_, i) => ({
-    id: i + 1,
-    title: `Green Business ${i + 1}`,
-    address: "123 Sustainable St, EcoTown",
-    phone: "(555) 123-4567",
-    website: "www.greenbusiness.com",
-    email: "info@greenbusiness.com",
-    instagram: "@greenbusiness",
-    description: "A local business committed to sustainable practices and community engagement.",
-    image: "/api/placeholder/300/200"
-  }));
+  const categories = ["All", "Cafe", "Artisan", "Agriculture", "Wellness", "Services", "Retail"];
+  // Placeholder directory entries with categories
+  const entries = Array.from({ length: 12 }, (_, i) => {
+    const category = categories[(i % (categories.length - 1)) + 1];
+    return {
+      id: i + 1,
+      title: `Green Business ${i + 1}`,
+      category,
+      address: "123 Sustainable St, EcoTown",
+      phone: "(555) 123-4567",
+      website: "www.greenbusiness.com",
+      email: "info@greenbusiness.com",
+      instagram: "@greenbusiness",
+      description: "A local business committed to sustainable practices and community engagement.",
+      image: "/api/placeholder/300/200"
+    };
+  });
+
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+
+  const filteredEntries = useMemo(
+    () => entries.filter(e => selectedCategory === "All" ? true : e.category === selectedCategory),
+    [entries, selectedCategory]
+  );
 
   return (
     <div className="min-h-screen bg-background py-12">
@@ -23,8 +35,24 @@ const Directory = () => {
           <p className="text-lg text-charcoal/80">Discover local businesses that share our values</p>
         </div>
         
+        <div className="mb-8">
+          <div className="bg-card border rounded-xl p-4 flex flex-col sm:flex-row gap-4 items-stretch sm:items-center">
+            <div className="text-sm text-muted-foreground">Category</div>
+            <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+              <SelectTrigger className="w-full sm:w-64">
+                <SelectValue placeholder="Select category" />
+              </SelectTrigger>
+              <SelectContent>
+                {categories.map(cat => (
+                  <SelectItem key={cat} value={cat}>{cat}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {entries.map((entry) => (
+          {filteredEntries.map((entry) => (
             <div key={entry.id} className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
               <div className="aspect-video bg-gradient-earth flex items-center justify-center text-ivory/80">
                 <span className="text-4xl">🏪</span>

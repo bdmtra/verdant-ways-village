@@ -9,9 +9,9 @@
 @layer base {
   :root {
     /* Primary earth tones */
-    --sage: 51 15% 69%;           /* #c3c2b3 */
+    --sage: 120 20% 92%;           /* light sage-green */
     --sand: 39 32% 83%;           /* #e2d9c4 */
-    --moss: 48 14% 66%;           /* #b5b2a0 */
+    --moss: 120 15% 70%;           /* moss green */
     --charcoal: 60 5% 42%;        /* #6d6d61 */
     --stone: 42 20% 77%;          /* #c6bca3 */
     --cream: 33 27% 85%;          /* #e2d3c9 */
@@ -25,13 +25,13 @@
     --driftwood: 32 14% 53%;      /* #91816f */
     --limestone: 42 18% 76%;      /* #c6c2b0 */
     --shadow: 60 7% 48%;          /* #7c7c6d */
-    --forest: 48 15% 55%;         /* #958671 */
+    --forest: 125 25% 32%;         /* deep forest green */
     --earth: 32 22% 42%;          /* #675844 */
     --sage-light: 42 18% 66%;     /* #b5a88c */
     --terracotta: 24 35% 62%;     /* #c69173 */
 
     /* Semantic color mappings */
-    --background: var(--ivory);
+    --background: var(--sage);
     --foreground: var(--earth);
     --card: var(--cream);
     --card-foreground: var(--charcoal);
@@ -67,6 +67,9 @@
   body {
     @apply bg-background text-foreground font-inter;
     font-feature-settings: "rlig" 1, "calt" 1;
+    /* Subtle body background texture */
+    background-image: radial-gradient(hsl(var(--forest) / 0.04) 1px, transparent 1px);
+    background-size: 12px 12px;
   }
   
   h1, h2, h3, h4, h5, h6 {
